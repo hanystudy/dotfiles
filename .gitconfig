@@ -1,0 +1,23 @@
+[user]
+	name = Yi Han
+	email = hanystudy@gmail.com
+[color]
+	ui = true
+	status = auto
+	interactive = auto
+	diff = auto
+	branch = auto
+[gui]
+	wmstate = normal
+	geometry = 844x415+185+356 189 188
+[alias]
+	st = status
+	cm = commit -m
+	ci = commit
+	co = checkout
+[push]
+	default = matching
+[credential]
+	helper = osxkeychain
+[core]
+	editor = /usr/bin/vim

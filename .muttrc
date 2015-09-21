@@ -1,0 +1,27 @@
+source ~/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+
+## General options
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 60
+set mbox_type=Maildir
+set smtp_authenticators = 'gssapi:login'
+
+## View mail content using third party tools
+set mailcap_path="~/.mailcap"
+auto_view text/html 
+### Work
+source "~/.mutt/.workrc"
+## Here we use the $folder variable that has just been set in the sourced file.
+## We must set it right now otherwise the 'folder' variable will change in the next sourced file.
+folder-hook $folder 'source ~/.mutt/.workrc'
+#
+### Folder
+source "~/.mutt/.personalrc"
+
+folder-hook $folder 'source ~/.mutt/.personalrc'
+
+## Shortcuts
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/.personalrc<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/.workrc<enter><change-folder>!<enter>'
