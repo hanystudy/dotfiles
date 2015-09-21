@@ -4,20 +4,23 @@ set ruler
 set ignorecase
 set nocompatible
 set hlsearch
-set background=dark
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 set incsearch
 set showcmd
 
 filetype off
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+
+call vundle#end()
 
 syntax enable
-let g:solarized_termcolors = 256
+set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 filetype plugin indent on
