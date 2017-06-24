@@ -1,0 +1,10 @@
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias firsthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias secondhalf move screenSizeX/2;screenOriginY screenSizeX;screenSizeY
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+alias bottomhalf move screenOriginX;screenSizeY/2 screenSizeX;screenSizeY
+bind 5:ctrl,alt ${full}
+bind 1:ctrl,alt ${firsthalf}
+bind 2:ctrl,alt ${secondhalf}
+bind 3:ctrl,alt ${tophalf}
+bind 4:ctrl,alt ${bottomhalf}
