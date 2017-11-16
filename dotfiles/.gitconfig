@@ -11,10 +11,31 @@
 	wmstate = normal
 	geometry = 844x415+185+356 189 188
 [alias]
+  ls = ls-files
+  ls-ignored = ls-files --others --i --exclude-standard
+  lg = log --graph
+  lp = log  --graph --patch
+  lk = log --graph --topo-order --abbrev-commit --date=short --decorate --all --boundary --pretty=format:'%Cgreen%ad %Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue[%cn]%Creset %Cblue%G?%Creset'
 	st = status
-	cm = commit -m
+  ss = status --short
+  ssb = status --short --branch
+  head = log -n1
+  ap = add --patch
+  aa = add --all
+  au = add --update
 	ci = commit
+	cm = commit -m
+  ca = commit --amend
 	co = checkout
+  dc = diff --cached
+  ds = diff --staged
+  dw = diff --word-diff
+  pr = pull --rebase
+  rb = rebase
+  rbc = rebase --continue
+  rl = reflog
+  rv = revert
+  sb = show-branch
 [push]
 	default = matching
 [credential]
@@ -26,3 +47,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[web]
+	browser = chrome
+[browser "chrome"]
+  cmd = /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+[merge]
+	tool = vimdiff
