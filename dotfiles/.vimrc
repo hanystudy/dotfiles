@@ -50,6 +50,9 @@ map <leader>t<leader> :tabnext
 
 "nerdtree
 let NERDTreeShowHidden=1
+"fix display issue in xfce
+let NERDTreeDirArrowExpandable='+'
+let NERDTreeDirArrowCollapsible='~'
 nmap <leader>m :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeFind<CR>
 
